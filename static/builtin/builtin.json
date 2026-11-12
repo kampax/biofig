@@ -1,0 +1,247 @@
+[
+ {
+  "file": "sun.svg",
+  "name": "Sol",
+  "category": "Clima",
+  "groups": [
+   "ecologia"
+  ],
+  "tags": "sol sun luz light energia energy"
+ },
+ {
+  "file": "cloud.svg",
+  "name": "Nube",
+  "category": "Clima",
+  "groups": [
+   "ecologia"
+  ],
+  "tags": "nube cloud"
+ },
+ {
+  "file": "rain.svg",
+  "name": "Lluvia",
+  "category": "Clima",
+  "groups": [
+   "ecologia"
+  ],
+  "tags": "lluvia rain precipitacion precipitation"
+ },
+ {
+  "file": "tree.svg",
+  "name": "Arbol frondoso",
+  "category": "Vegetacion",
+  "groups": [
+   "ecologia"
+  ],
+  "tags": "arbol tree bosque forest"
+ },
+ {
+  "file": "conifer.svg",
+  "name": "Conifera",
+  "category": "Vegetacion",
+  "groups": [
+   "ecologia"
+  ],
+  "tags": "pino pine conifer arbol tree"
+ },
+ {
+  "file": "grass.svg",
+  "name": "Pasto",
+  "category": "Vegetacion",
+  "groups": [
+   "ecologia"
+  ],
+  "tags": "pasto grass pradera herb"
+ },
+ {
+  "file": "soil.svg",
+  "name": "Suelo (horizontes)",
+  "category": "Paisaje",
+  "groups": [
+   "ecologia"
+  ],
+  "tags": "suelo soil horizonte"
+ },
+ {
+  "file": "water.svg",
+  "name": "Agua",
+  "category": "Paisaje",
+  "groups": [
+   "ecologia"
+  ],
+  "tags": "agua water lago lake rio river oceano"
+ },
+ {
+  "file": "mountain.svg",
+  "name": "Montana",
+  "category": "Paisaje",
+  "groups": [
+   "ecologia"
+  ],
+  "tags": "montana mountain"
+ },
+ {
+  "file": "co2.svg",
+  "name": "CO2",
+  "category": "Molecula",
+  "groups": [
+   "ecologia",
+   "molecular"
+  ],
+  "tags": "co2 carbono carbon dioxido"
+ },
+ {
+  "file": "lipid_bilayer.svg",
+  "name": "Bicapa lipidica",
+  "category": "Membrana",
+  "groups": [
+   "molecular",
+   "celular"
+  ],
+  "tags": "membrana membrane bicapa bilayer lipid"
+ },
+ {
+  "file": "dna_helix.svg",
+  "name": "Doble helice ADN",
+  "category": "Acidos nucleicos",
+  "groups": [
+   "molecular"
+  ],
+  "tags": "adn dna helice helix"
+ },
+ {
+  "file": "mrna.svg",
+  "name": "ARNm",
+  "category": "Acidos nucleicos",
+  "groups": [
+   "molecular"
+  ],
+  "tags": "arn rna mrna transcripto"
+ },
+ {
+  "file": "protein_blob.svg",
+  "name": "Proteina",
+  "category": "Proteinas",
+  "groups": [
+   "molecular"
+  ],
+  "tags": "proteina protein"
+ },
+ {
+  "file": "receptor.svg",
+  "name": "Receptor transmembrana",
+  "category": "Proteinas",
+  "groups": [
+   "molecular",
+   "celular"
+  ],
+  "tags": "receptor"
+ },
+ {
+  "file": "ion_channel.svg",
+  "name": "Canal ionico",
+  "category": "Proteinas",
+  "groups": [
+   "molecular",
+   "celular"
+  ],
+  "tags": "canal channel ion"
+ },
+ {
+  "file": "enzyme.svg",
+  "name": "Enzima + sustrato",
+  "category": "Proteinas",
+  "groups": [
+   "molecular"
+  ],
+  "tags": "enzima enzyme sustrato substrate"
+ },
+ {
+  "file": "food_web_node.svg",
+  "name": "Nodo de red trofica",
+  "category": "Diagramas",
+  "groups": [
+   "ecologia"
+  ],
+  "tags": "nodo red trofica food web"
+ },
+ {
+  "file": "pmca_ribbon.svg",
+  "name": "Proteina en cintas (PMCA)",
+  "category": "Proteinas",
+  "groups": [
+   "molecular"
+  ],
+  "tags": "pmca proteina protein ribbon cinta bomba calcio atpasa"
+ },
+ {
+  "file": "bsa_ribbon.svg",
+  "name": "Proteina en cintas (BSA)",
+  "category": "Proteinas",
+  "groups": [
+   "molecular"
+  ],
+  "tags": "bsa albumina albumin proteina protein ribbon cinta"
+ },
+ {
+  "file": "tubulin_ribbon.svg",
+  "name": "Dimero de tubulina (cintas)",
+  "category": "Proteinas",
+  "groups": [
+   "molecular",
+   "celular"
+  ],
+  "tags": "tubulina tubulin dimero dimer proteina ribbon cinta"
+ },
+ {
+  "file": "antibody_primary.svg",
+  "name": "Anticuerpo primario",
+  "category": "Anticuerpos",
+  "groups": [
+   "molecular",
+   "laboratorio"
+  ],
+  "tags": "anticuerpo antibody primario primary igg"
+ },
+ {
+  "file": "antibody_secondary_fluor.svg",
+  "name": "Anticuerpo secundario fluorescente",
+  "category": "Anticuerpos",
+  "groups": [
+   "molecular",
+   "laboratorio"
+  ],
+  "tags": "anticuerpo antibody secundario secondary fluorescente fluor conjugado"
+ },
+ {
+  "file": "resin_bead.svg",
+  "name": "Bola de resina",
+  "category": "Laboratorio",
+  "groups": [
+   "laboratorio",
+   "molecular"
+  ],
+  "tags": "resina resin bola bead agarosa pull down"
+ },
+ {
+  "file": "zoom_callout.svg",
+  "name": "Lupa de detalle (zoom)",
+  "category": "Diagramas",
+  "groups": [
+   "laboratorio",
+   "molecular",
+   "ecologia"
+  ],
+  "tags": "zoom detalle ampliacion lupa callout"
+ },
+ {
+  "file": "blot_membrane.svg",
+  "name": "Membrana de blot",
+  "category": "Laboratorio",
+  "groups": [
+   "laboratorio",
+   "molecular"
+  ],
+  "tags": "membrana nitrocelulosa blot dot"
+ }
+]

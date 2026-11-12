@@ -1,0 +1,845 @@
+[
+ {
+  "file": "mem_bicapa_larga.svg",
+  "name": "Bicapa lipídica larga",
+  "category": "Membranas",
+  "groups": [
+   "membranas",
+   "molecular",
+   "celular"
+  ],
+  "tags": "membrana bicapa bilayer lipid fosfolipido"
+ },
+ {
+  "file": "mem_bicapa_curva.svg",
+  "name": "Bicapa lipídica curva",
+  "category": "Membranas",
+  "groups": [
+   "membranas",
+   "molecular",
+   "celular"
+  ],
+  "tags": "membrana bicapa curva curved bilayer"
+ },
+ {
+  "file": "mem_bicapa_codo.svg",
+  "name": "Bicapa lipídica en codo (90°)",
+  "category": "Membranas",
+  "groups": [
+   "membranas",
+   "molecular",
+   "celular"
+  ],
+  "tags": "membrana bicapa curva codo curved bilayer"
+ },
+ {
+  "file": "mem_vesicula.svg",
+  "name": "Vesícula / liposoma",
+  "category": "Membranas",
+  "groups": [
+   "membranas",
+   "molecular",
+   "celular"
+  ],
+  "tags": "vesicula liposoma liposome vesicle exosoma"
+ },
+ {
+  "file": "mem_micela.svg",
+  "name": "Micela",
+  "category": "Membranas",
+  "groups": [
+   "membranas",
+   "molecular",
+   "celular"
+  ],
+  "tags": "micela micelle detergente surfactante"
+ },
+ {
+  "file": "mem_micela_inversa.svg",
+  "name": "Micela inversa",
+  "category": "Membranas",
+  "groups": [
+   "membranas",
+   "molecular",
+   "celular"
+  ],
+  "tags": "micela inversa reverse micelle"
+ },
+ {
+  "file": "mem_fosfolipido.svg",
+  "name": "Fosfolípido",
+  "category": "Membranas",
+  "groups": [
+   "membranas",
+   "molecular",
+   "celular"
+  ],
+  "tags": "fosfolipido phospholipid lipido lipid"
+ },
+ {
+  "file": "mem_colesterol.svg",
+  "name": "Colesterol",
+  "category": "Membranas",
+  "groups": [
+   "membranas",
+   "molecular",
+   "celular"
+  ],
+  "tags": "colesterol cholesterol esterol sterol"
+ },
+ {
+  "file": "mem_proteina_transmembrana.svg",
+  "name": "Proteína transmembrana en bicapa",
+  "category": "Membranas",
+  "groups": [
+   "membranas",
+   "molecular",
+   "celular"
+  ],
+  "tags": "proteina transmembrana transmembrane protein membrana"
+ },
+ {
+  "file": "mem_canal.svg",
+  "name": "Canal iónico en bicapa",
+  "category": "Membranas",
+  "groups": [
+   "membranas",
+   "molecular",
+   "celular"
+  ],
+  "tags": "canal ionico ion channel poro pore membrana"
+ },
+ {
+  "file": "mem_gpcr.svg",
+  "name": "Receptor acoplado a proteína G (7TM)",
+  "category": "Membranas",
+  "groups": [
+   "membranas",
+   "molecular",
+   "celular"
+  ],
+  "tags": "gpcr receptor proteina g siete transmembrana 7tm"
+ },
+ {
+  "file": "mem_transportador.svg",
+  "name": "Transportador en bicapa",
+  "category": "Membranas",
+  "groups": [
+   "membranas",
+   "molecular",
+   "celular"
+  ],
+  "tags": "transportador transporter carrier bomba pump membrana"
+ },
+ {
+  "file": "mem_balsa_lipidica.svg",
+  "name": "Balsa lipídica",
+  "category": "Membranas",
+  "groups": [
+   "membranas",
+   "molecular",
+   "celular"
+  ],
+  "tags": "balsa lipidica lipid raft colesterol esfingolipido"
+ },
+ {
+  "file": "mem_doble_membrana.svg",
+  "name": "Doble membrana",
+  "category": "Membranas",
+  "groups": [
+   "membranas",
+   "molecular",
+   "celular"
+  ],
+  "tags": "doble membrana double membrane mitocondria envoltura nuclear"
+ },
+ {
+  "file": "mem_endocitosis.svg",
+  "name": "Endocitosis (invaginación)",
+  "category": "Membranas",
+  "groups": [
+   "membranas",
+   "molecular",
+   "celular"
+  ],
+  "tags": "endocitosis endocytosis invaginacion fosa clatrina vesicula"
+ },
+ {
+  "file": "mem_glucocaliz.svg",
+  "name": "Membrana con glucocáliz",
+  "category": "Membranas",
+  "groups": [
+   "membranas",
+   "molecular",
+   "celular"
+  ],
+  "tags": "glucocaliz glycocalyx glicoproteina azucar membrana plasmatica"
+ },
+ {
+  "file": "gr_barras.svg",
+  "name": "Gráfico de barras con error",
+  "category": "Gráficos y símbolos",
+  "groups": [
+   "graficos"
+  ],
+  "tags": "grafico barras bar chart error"
+ },
+ {
+  "file": "gr_barras_agrupadas.svg",
+  "name": "Barras agrupadas",
+  "category": "Gráficos y símbolos",
+  "groups": [
+   "graficos"
+  ],
+  "tags": "grafico barras agrupadas grouped bar"
+ },
+ {
+  "file": "gr_barras_apiladas.svg",
+  "name": "Barras apiladas",
+  "category": "Gráficos y símbolos",
+  "groups": [
+   "graficos"
+  ],
+  "tags": "grafico barras apiladas stacked"
+ },
+ {
+  "file": "gr_lineas.svg",
+  "name": "Gráfico de líneas",
+  "category": "Gráficos y símbolos",
+  "groups": [
+   "graficos"
+  ],
+  "tags": "grafico lineas line chart serie"
+ },
+ {
+  "file": "gr_dispersion.svg",
+  "name": "Dispersión con regresión",
+  "category": "Gráficos y símbolos",
+  "groups": [
+   "graficos"
+  ],
+  "tags": "grafico dispersion scatter regresion correlacion"
+ },
+ {
+  "file": "gr_boxplot.svg",
+  "name": "Diagrama de cajas (boxplot)",
+  "category": "Gráficos y símbolos",
+  "groups": [
+   "graficos"
+  ],
+  "tags": "grafico boxplot cajas bigotes"
+ },
+ {
+  "file": "gr_violin.svg",
+  "name": "Gráfico de violín",
+  "category": "Gráficos y símbolos",
+  "groups": [
+   "graficos"
+  ],
+  "tags": "grafico violin violin plot distribucion"
+ },
+ {
+  "file": "gr_histograma.svg",
+  "name": "Histograma",
+  "category": "Gráficos y símbolos",
+  "groups": [
+   "graficos"
+  ],
+  "tags": "grafico histograma histogram frecuencia distribucion"
+ },
+ {
+  "file": "gr_heatmap.svg",
+  "name": "Mapa de calor (heatmap)",
+  "category": "Gráficos y símbolos",
+  "groups": [
+   "graficos"
+  ],
+  "tags": "grafico heatmap mapa calor matriz expresion"
+ },
+ {
+  "file": "gr_torta.svg",
+  "name": "Gráfico de torta",
+  "category": "Gráficos y símbolos",
+  "groups": [
+   "graficos"
+  ],
+  "tags": "grafico torta pie chart proporcion"
+ },
+ {
+  "file": "gr_dona.svg",
+  "name": "Gráfico de dona",
+  "category": "Gráficos y símbolos",
+  "groups": [
+   "graficos"
+  ],
+  "tags": "grafico dona donut chart proporcion"
+ },
+ {
+  "file": "gr_venn2.svg",
+  "name": "Diagrama de Venn (2)",
+  "category": "Gráficos y símbolos",
+  "groups": [
+   "graficos"
+  ],
+  "tags": "venn diagrama conjuntos interseccion"
+ },
+ {
+  "file": "gr_venn3.svg",
+  "name": "Diagrama de Venn (3)",
+  "category": "Gráficos y símbolos",
+  "groups": [
+   "graficos"
+  ],
+  "tags": "venn diagrama tres conjuntos interseccion"
+ },
+ {
+  "file": "gr_dosis_respuesta.svg",
+  "name": "Curva dosis-respuesta",
+  "category": "Gráficos y símbolos",
+  "groups": [
+   "graficos"
+  ],
+  "tags": "dosis respuesta sigmoide dose response ic50 ec50"
+ },
+ {
+  "file": "gr_kaplan_meier.svg",
+  "name": "Curva de supervivencia (Kaplan-Meier)",
+  "category": "Gráficos y símbolos",
+  "groups": [
+   "graficos"
+  ],
+  "tags": "kaplan meier supervivencia survival"
+ },
+ {
+  "file": "gr_volcano.svg",
+  "name": "Volcano plot",
+  "category": "Gráficos y símbolos",
+  "groups": [
+   "graficos"
+  ],
+  "tags": "volcano plot expresion diferencial transcriptomica"
+ },
+ {
+  "file": "gr_pca.svg",
+  "name": "Análisis de componentes principales (PCA)",
+  "category": "Gráficos y símbolos",
+  "groups": [
+   "graficos"
+  ],
+  "tags": "pca componentes principales ordenacion nmds clusters"
+ },
+ {
+  "file": "gr_serie_temporal.svg",
+  "name": "Serie temporal con intervalo de confianza",
+  "category": "Gráficos y símbolos",
+  "groups": [
+   "graficos"
+  ],
+  "tags": "serie temporal time series intervalo confianza estacional ndvi"
+ },
+ {
+  "file": "gr_significancia.svg",
+  "name": "Corchete de significancia (***)",
+  "category": "Gráficos y símbolos",
+  "groups": [
+   "graficos"
+  ],
+  "tags": "significancia asterisco p valor bracket estadistica"
+ },
+ {
+  "file": "gr_barra_escala.svg",
+  "name": "Barra de escala",
+  "category": "Gráficos y símbolos",
+  "groups": [
+   "graficos"
+  ],
+  "tags": "barra escala scale bar um nm mm"
+ },
+ {
+  "file": "sim_ciclo.svg",
+  "name": "Flechas de ciclo",
+  "category": "Gráficos y símbolos",
+  "groups": [
+   "graficos"
+  ],
+  "tags": "ciclo cycle flechas circulares reciclaje"
+ },
+ {
+  "file": "sim_flecha_curva.svg",
+  "name": "Flecha curva",
+  "category": "Gráficos y símbolos",
+  "groups": [
+   "graficos"
+  ],
+  "tags": "flecha curva curved arrow"
+ },
+ {
+  "file": "sim_flecha_gruesa.svg",
+  "name": "Flecha de bloque",
+  "category": "Gráficos y símbolos",
+  "groups": [
+   "graficos"
+  ],
+  "tags": "flecha gruesa block arrow proceso paso"
+ },
+ {
+  "file": "sim_mas.svg",
+  "name": "Signo más (aumento)",
+  "category": "Gráficos y símbolos",
+  "groups": [
+   "graficos"
+  ],
+  "tags": "mas plus aumento positivo"
+ },
+ {
+  "file": "sim_menos.svg",
+  "name": "Signo menos (disminución)",
+  "category": "Gráficos y símbolos",
+  "groups": [
+   "graficos"
+  ],
+  "tags": "menos minus disminucion negativo"
+ },
+ {
+  "file": "sim_flecha_arriba.svg",
+  "name": "Aumento (flecha arriba)",
+  "category": "Gráficos y símbolos",
+  "groups": [
+   "graficos"
+  ],
+  "tags": "aumento incremento upregulation flecha arriba"
+ },
+ {
+  "file": "sim_flecha_abajo.svg",
+  "name": "Disminución (flecha abajo)",
+  "category": "Gráficos y símbolos",
+  "groups": [
+   "graficos"
+  ],
+  "tags": "disminucion downregulation flecha abajo"
+ },
+ {
+  "file": "sim_inhibicion.svg",
+  "name": "Símbolo de inhibición",
+  "category": "Gráficos y símbolos",
+  "groups": [
+   "graficos"
+  ],
+  "tags": "inhibicion inhibition bloqueo t"
+ },
+ {
+  "file": "sim_rayo.svg",
+  "name": "Estímulo (rayo)",
+  "category": "Gráficos y símbolos",
+  "groups": [
+   "graficos"
+  ],
+  "tags": "estimulo rayo stimulus luz senal"
+ },
+ {
+  "file": "sim_reloj.svg",
+  "name": "Tiempo (reloj)",
+  "category": "Gráficos y símbolos",
+  "groups": [
+   "graficos"
+  ],
+  "tags": "tiempo reloj time clock incubacion"
+ },
+ {
+  "file": "sim_temperatura.svg",
+  "name": "Temperatura",
+  "category": "Gráficos y símbolos",
+  "groups": [
+   "graficos"
+  ],
+  "tags": "temperatura termometro temperature calor"
+ },
+ {
+  "file": "sim_marca_ok.svg",
+  "name": "Correcto (tilde)",
+  "category": "Gráficos y símbolos",
+  "groups": [
+   "graficos"
+  ],
+  "tags": "correcto check tilde si ok"
+ },
+ {
+  "file": "sim_marca_no.svg",
+  "name": "Incorrecto (cruz)",
+  "category": "Gráficos y símbolos",
+  "groups": [
+   "graficos"
+  ],
+  "tags": "incorrecto cruz cross no x"
+ },
+ {
+  "file": "sim_advertencia.svg",
+  "name": "Advertencia",
+  "category": "Gráficos y símbolos",
+  "groups": [
+   "graficos"
+  ],
+  "tags": "advertencia warning precaucion alerta"
+ },
+ {
+  "file": "sim_pin_mapa.svg",
+  "name": "Marcador de mapa",
+  "category": "Gráficos y símbolos",
+  "groups": [
+   "graficos"
+  ],
+  "tags": "marcador mapa pin ubicacion sitio muestreo gps"
+ },
+ {
+  "file": "sim_norte.svg",
+  "name": "Flecha norte",
+  "category": "Gráficos y símbolos",
+  "groups": [
+   "graficos"
+  ],
+  "tags": "norte north arrow brujula mapa"
+ },
+ {
+  "file": "sat_satelite.svg",
+  "name": "Satélite de observación",
+  "category": "Satélites y teledetección",
+  "groups": [
+   "satelite",
+   "ecologia"
+  ],
+  "tags": "satelite satellite sentinel landsat orbita"
+ },
+ {
+  "file": "sat_satelite_barrido.svg",
+  "name": "Satélite con franja de barrido",
+  "category": "Satélites y teledetección",
+  "groups": [
+   "satelite",
+   "ecologia"
+  ],
+  "tags": "satelite barrido swath sensor teledeteccion imagen remote sensing"
+ },
+ {
+  "file": "sat_orbita.svg",
+  "name": "Tierra con órbita satelital",
+  "category": "Satélites y teledetección",
+  "groups": [
+   "satelite",
+   "ecologia"
+  ],
+  "tags": "orbita tierra earth orbit satelite polar"
+ },
+ {
+  "file": "sat_dron.svg",
+  "name": "Dron (UAV)",
+  "category": "Satélites y teledetección",
+  "groups": [
+   "satelite",
+   "ecologia"
+  ],
+  "tags": "dron drone uav vant multirrotor fotogrametria"
+ },
+ {
+  "file": "sat_dron_huella.svg",
+  "name": "Dron con huella de imagen",
+  "category": "Satélites y teledetección",
+  "groups": [
+   "satelite",
+   "ecologia"
+  ],
+  "tags": "dron drone huella footprint ortomosaico vuelo"
+ },
+ {
+  "file": "sat_estacion_terrena.svg",
+  "name": "Estación terrena (antena)",
+  "category": "Satélites y teledetección",
+  "groups": [
+   "satelite",
+   "ecologia"
+  ],
+  "tags": "estacion terrena antena parabolica ground station"
+ },
+ {
+  "file": "sat_cubo_multiespectral.svg",
+  "name": "Cubo de imagen multiespectral",
+  "category": "Satélites y teledetección",
+  "groups": [
+   "satelite",
+   "ecologia"
+  ],
+  "tags": "multiespectral bandas cubo hiperespectral raster imagen satelital"
+ },
+ {
+  "file": "sat_mapa_ndvi.svg",
+  "name": "Mapa de píxeles NDVI",
+  "category": "Satélites y teledetección",
+  "groups": [
+   "satelite",
+   "ecologia"
+  ],
+  "tags": "ndvi mapa pixel raster indice vegetacion evi"
+ },
+ {
+  "file": "sat_firma_espectral.svg",
+  "name": "Firmas espectrales (vegetación, suelo, agua)",
+  "category": "Satélites y teledetección",
+  "groups": [
+   "satelite",
+   "ecologia"
+  ],
+  "tags": "firma espectral reflectancia spectral signature vegetacion suelo agua"
+ },
+ {
+  "file": "sat_torre_flujo.svg",
+  "name": "Torre de flujo (eddy covariance)",
+  "category": "Satélites y teledetección",
+  "groups": [
+   "satelite",
+   "ecologia"
+  ],
+  "tags": "torre flujo eddy covariance co2 evapotranspiracion micrometeorologia"
+ },
+ {
+  "file": "sat_estacion_meteo.svg",
+  "name": "Estación meteorológica",
+  "category": "Satélites y teledetección",
+  "groups": [
+   "satelite",
+   "ecologia"
+  ],
+  "tags": "estacion meteorologica clima pluviometro anemometro weather station"
+ },
+ {
+  "file": "campo_cuadrante.svg",
+  "name": "Cuadrante de muestreo",
+  "category": "Ambiente y ecología",
+  "groups": [
+   "ecologia",
+   "laboratorio"
+  ],
+  "tags": "cuadrante quadrat muestreo vegetacion parcela"
+ },
+ {
+  "file": "campo_trampa_camara.svg",
+  "name": "Cámara trampa",
+  "category": "Ambiente y ecología",
+  "groups": [
+   "ecologia",
+   "laboratorio"
+  ],
+  "tags": "camara trampa camera trap fototrampeo mamiferos"
+ },
+ {
+  "file": "campo_pluviometro.svg",
+  "name": "Pluviómetro",
+  "category": "Ambiente y ecología",
+  "groups": [
+   "ecologia",
+   "laboratorio"
+  ],
+  "tags": "pluviometro rain gauge precipitacion lluvia"
+ },
+ {
+  "file": "campo_barreno.svg",
+  "name": "Barreno / muestreador de suelo",
+  "category": "Ambiente y ecología",
+  "groups": [
+   "ecologia",
+   "laboratorio"
+  ],
+  "tags": "barreno muestreador suelo soil corer auger nucleo"
+ },
+ {
+  "file": "campo_transecta.svg",
+  "name": "Transecta con estacas",
+  "category": "Ambiente y ecología",
+  "groups": [
+   "ecologia",
+   "laboratorio"
+  ],
+  "tags": "transecta transect linea muestreo estaca"
+ },
+ {
+  "file": "campo_gps.svg",
+  "name": "GPS de mano",
+  "category": "Ambiente y ecología",
+  "groups": [
+   "ecologia",
+   "laboratorio"
+  ],
+  "tags": "gps navegador georreferencia coordenadas"
+ },
+ {
+  "file": "campo_disco_secchi.svg",
+  "name": "Disco de Secchi",
+  "category": "Ambiente y ecología",
+  "groups": [
+   "ecologia",
+   "laboratorio"
+  ],
+  "tags": "disco secchi transparencia agua limnologia"
+ },
+ {
+  "file": "campo_botella_niskin.svg",
+  "name": "Botella muestreadora de agua",
+  "category": "Ambiente y ecología",
+  "groups": [
+   "ecologia",
+   "laboratorio"
+  ],
+  "tags": "botella niskin van dorn muestreo agua limnologia"
+ },
+ {
+  "file": "campo_red_plancton.svg",
+  "name": "Red de plancton",
+  "category": "Ambiente y ecología",
+  "groups": [
+   "ecologia",
+   "laboratorio"
+  ],
+  "tags": "red plancton plankton net zooplancton muestreo"
+ },
+ {
+  "file": "campo_piezometro.svg",
+  "name": "Piezómetro / pozo de monitoreo",
+  "category": "Ambiente y ecología",
+  "groups": [
+   "ecologia",
+   "laboratorio"
+  ],
+  "tags": "piezometro pozo monitoreo nivel freatico agua subterranea"
+ },
+ {
+  "file": "agro_campo_cultivo.svg",
+  "name": "Campo cultivado (surcos)",
+  "category": "Agricultura",
+  "groups": [
+   "agricultura",
+   "ecologia"
+  ],
+  "tags": "campo cultivo surcos parcela agricola cultivo"
+ },
+ {
+  "file": "agro_invernadero.svg",
+  "name": "Invernadero",
+  "category": "Agricultura",
+  "groups": [
+   "agricultura",
+   "ecologia"
+  ],
+  "tags": "invernadero greenhouse cultivo protegido"
+ },
+ {
+  "file": "agro_riego.svg",
+  "name": "Riego por aspersión",
+  "category": "Agricultura",
+  "groups": [
+   "agricultura",
+   "ecologia"
+  ],
+  "tags": "riego aspersion aspersor irrigacion agua"
+ },
+ {
+  "file": "agro_terrazas.svg",
+  "name": "Terrazas de cultivo",
+  "category": "Agricultura",
+  "groups": [
+   "agricultura",
+   "ecologia"
+  ],
+  "tags": "terrazas andenes cultivo ladera conservacion suelo"
+ },
+ {
+  "file": "agro_planta_raices.svg",
+  "name": "Planta con raíces",
+  "category": "Agricultura",
+  "groups": [
+   "agricultura",
+   "ecologia"
+  ],
+  "tags": "planta raiz raices root anatomia vegetal plantula"
+ },
+ {
+  "file": "agro_hoja_enferma.svg",
+  "name": "Hoja con lesiones (fitopatología)",
+  "category": "Agricultura",
+  "groups": [
+   "agricultura",
+   "ecologia"
+  ],
+  "tags": "fitopatologia hoja enfermedad mancha roya hongo patogeno"
+ },
+ {
+  "file": "agro_planta_marchita.svg",
+  "name": "Planta marchita (estrés)",
+  "category": "Agricultura",
+  "groups": [
+   "agricultura",
+   "ecologia"
+  ],
+  "tags": "planta marchita estres hidrico sequia enfermedad"
+ },
+ {
+  "file": "agro_germinacion.svg",
+  "name": "Etapas de germinación",
+  "category": "Agricultura",
+  "groups": [
+   "agricultura",
+   "ecologia"
+  ],
+  "tags": "germinacion semilla plantula emergencia etapas fenologia"
+ },
+ {
+  "file": "agro_rio.svg",
+  "name": "Río con riberas",
+  "category": "Agricultura",
+  "groups": [
+   "agricultura",
+   "ecologia",
+   "ecologia"
+  ],
+  "tags": "rio river cauce ribera arroyo agua"
+ },
+ {
+  "file": "agro_laguna.svg",
+  "name": "Laguna / lago",
+  "category": "Agricultura",
+  "groups": [
+   "agricultura",
+   "ecologia",
+   "ecologia"
+  ],
+  "tags": "laguna lago lake humedal espejo agua"
+ },
+ {
+  "file": "agro_bosque.svg",
+  "name": "Franja de bosque",
+  "category": "Agricultura",
+  "groups": [
+   "agricultura",
+   "ecologia",
+   "ecologia"
+  ],
+  "tags": "bosque forest arboles franja vegetacion"
+ },
+ {
+  "file": "agro_granero.svg",
+  "name": "Granero / establo",
+  "category": "Agricultura",
+  "groups": [
+   "agricultura",
+   "ecologia"
+  ],
+  "tags": "granero establo galpon barn granja"
+ },
+ {
+  "file": "agro_alambrado.svg",
+  "name": "Alambrado / cerco",
+  "category": "Agricultura",
+  "groups": [
+   "agricultura",
+   "ecologia"
+  ],
+  "tags": "alambrado cerco cerca fence exclusion clausura ganado"
+ }
+]

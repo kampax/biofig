@@ -1,0 +1,5 @@
+# Dependencias principales de BioFig (las instala instalar.py en .venv)
+fastapi>=0.110
+uvicorn>=0.29
+httpx>=0.27
+watchfiles>=0.21

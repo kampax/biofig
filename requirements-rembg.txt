@@ -1,0 +1,2 @@
+# Opcional: quitar el fondo de imágenes (rembg, MIT; corre local con ONNX Runtime). Requiere Python 3.11+.
+rembg[cpu]>=2.0

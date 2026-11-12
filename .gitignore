@@ -1,0 +1,30 @@
+# --- Secretos: claves de IA (nunca subir) ---
+.env
+
+# --- Entorno e instalación local (lo recrea instalar.py) ---
+.venv/
+__pycache__/
+*.pyc
+.instalado
+# bibliotecas de iconos descargadas (~620 MB)
+vendor_src/
+# índice generado por build_index.py
+data/icons.json
+
+# --- Datos personales de cada usuario ---
+data/projects/
+data/custom_icons/
+data/.ejemplos_creados
+exports/
+
+# --- Cachés ---
+data/pdb_cache/
+data/phylopic/
+static/pdb/renders/
+# coordenadas PDB originales (se pueden volver a bajar); se conservan las orientadas que usan los ejemplos
+static/pdb/*.pdb
+!static/pdb/*_orientado.pdb
+
+# --- Sistema ---
+.DS_Store
+Thumbs.db

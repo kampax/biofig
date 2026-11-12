@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BioFig</title>
+<link rel="stylesheet" href="/static/style.css">
+<link rel="icon" href="/static/builtin/dna_helix.svg">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><img src="/static/builtin/dna_helix.svg" alt=""> BioFig</div>
+  <input id="projName" class="proj-name" value="Figura sin título" title="Nombre de la figura">
+  <span id="dirtyMark" class="dirty" title="Cambios sin guardar"></span>
+  <div class="tb-group">
+    <button id="btnNew" title="Nueva figura">Nueva</button>
+    <button id="btnOpen" title="Abrir figura guardada">Abrir</button>
+    <button id="btnSave" class="primary" title="Guardar (Ctrl+S)">Guardar</button>
+  </div>
+  <div class="tb-group">
+    <button id="btnUndo" title="Deshacer (Ctrl+Z)">↶</button>
+    <button id="btnRedo" title="Rehacer (Ctrl+Y)">↷</button>
+  </div>
+  <div class="tb-group">
+    <button id="btnZoomOut" title="Alejar">−</button>
+    <span id="zoomLabel" class="zoom-label">100%</span>
+    <button id="btnZoomIn" title="Acercar">+</button>
+    <button id="btnFit" title="Ajustar a la pantalla">Ajustar</button>
+  </div>
+  <div class="spacer"></div>
+  <div class="tb-group">
+    <button id="btnCredits" title="Atribuciones de los iconos usados">Créditos</button>
+    <div class="dropdown">
+      <button id="btnExport" class="primary">Exportar ▾</button>
+      <div class="dropdown-menu" id="exportMenu">
+        <button data-export="png3">PNG alta resolución (×3)</button>
+        <button data-export="png1">PNG pantalla (×1)</button>
+        <button data-export="pngT">PNG fondo transparente (×3)</button>
+        <button data-export="jpg">JPG (×3)</button>
+        <hr>
+        <button data-export="json">Archivo BioFig (.json)</button>
+        <button data-export="import">Importar archivo BioFig…</button>
+      </div>
+    </div>
+  </div>
+  <input type="file" id="importFile" accept=".json" hidden>
+</header>
+
+<main class="layout">
+  <aside class="sidebar">
+    <nav class="tabs">
+      <button class="tab active" data-tab="icons">Iconos</button>
+      <button class="tab" data-tab="shapes">Formas</button>
+      <button class="tab" data-tab="ai">IA ✨</button>
+    </nav>
+
+    <section class="tab-panel active" id="tab-icons">
+      <button id="btnCustomIcon" class="custom-btn">＋ Icono personalizado <small>(imagen o SVG, con opción de quitar el fondo)</small></button>
+      <input id="iconSearch" class="search" placeholder="Buscar: zorro, ribosoma, árbol, ADN…" autocomplete="off">
+      <div class="chips" id="groupChips">
+        <button class="chip active" data-group="ecologia">Ecología</button>
+        <button class="chip" data-group="molecular">Molecular</button>
+        <button class="chip" data-group="celular">Celular</button>
+        <button class="chip" data-group="laboratorio">Laboratorio y objetos</button>
+        <button class="chip" data-group="agricultura">Agricultura</button>
+        <button class="chip" data-group="membranas">Membranas</button>
+        <button class="chip" data-group="graficos">Gráficos y símbolos</button>
+        <button class="chip" data-group="satelite">Satélite</button>
+        <button class="chip" data-group="mis">★ Mis iconos</button>
+        <button class="chip" data-group="">Todos</button>
+      </div>
+      <select id="catSelect" class="cat-select"><option value="">Todas las categorías</option></select>
+      <div id="ppSection" hidden>
+        <div class="result-count pp-head" id="ppCount"></div>
+        <div class="icon-grid" id="ppGrid"></div>
+      </div>
+      <div class="result-count" id="resultCount"></div>
+      <div class="icon-grid" id="iconGrid"></div>
+      <button id="btnMore" class="more" hidden>Ver más</button>
+    </section>
+
+    <section class="tab-panel" id="tab-shapes">
+      <h4>Conectores <small>(clic y arrastrá en el lienzo)</small></h4>
+      <div class="shape-grid">
+        <button class="shape-btn" data-tool="arrow"><svg viewBox="0 0 60 30"><line x1="6" y1="15" x2="46" y2="15" stroke="currentColor" stroke-width="3"/><path d="M44 8l12 7-12 7z" fill="currentColor"/></svg>Activación</button>
+        <button class="shape-btn" data-tool="inhibit"><svg viewBox="0 0 60 30"><line x1="6" y1="15" x2="52" y2="15" stroke="currentColor" stroke-width="3"/><line x1="52" y1="5" x2="52" y2="25" stroke="currentColor" stroke-width="4"/></svg>Inhibición</button>
+        <button class="shape-btn" data-tool="dashed"><svg viewBox="0 0 60 30"><line x1="6" y1="15" x2="46" y2="15" stroke="currentColor" stroke-width="3" stroke-dasharray="6 4"/><path d="M44 8l12 7-12 7z" fill="currentColor"/></svg>Indirecto / flujo</button>
+        <button class="shape-btn" data-tool="double"><svg viewBox="0 0 60 30"><line x1="14" y1="15" x2="46" y2="15" stroke="currentColor" stroke-width="3"/><path d="M44 8l12 7-12 7zM16 8L4 15l12 7z" fill="currentColor"/></svg>Reversible</button>
+        <button class="shape-btn" data-tool="catalysis"><svg viewBox="0 0 60 30"><line x1="6" y1="15" x2="48" y2="15" stroke="currentColor" stroke-width="3"/><circle cx="50" cy="15" r="6" fill="currentColor"/></svg>Catálisis</button>
+        <button class="shape-btn" data-tool="line"><svg viewBox="0 0 60 30"><line x1="6" y1="15" x2="54" y2="15" stroke="currentColor" stroke-width="3"/></svg>Línea</button>
+      </div>
+      <h4>Formas</h4>
+      <div class="shape-grid">
+        <button class="shape-btn" data-add="rect"><svg viewBox="0 0 60 30"><rect x="8" y="5" width="44" height="20" rx="4" fill="#dbe8f5" stroke="#5b7ea4" stroke-width="2"/></svg>Rectángulo</button>
+        <button class="shape-btn" data-add="ellipse"><svg viewBox="0 0 60 30"><ellipse cx="30" cy="15" rx="24" ry="11" fill="#e9f6ea" stroke="#3f9b4a" stroke-width="2"/></svg>Célula / elipse</button>
+        <button class="shape-btn" data-add="nucleus"><svg viewBox="0 0 60 30"><ellipse cx="30" cy="15" rx="16" ry="10" fill="#e7dcf3" stroke="#7d5ba6" stroke-width="2" stroke-dasharray="4 2"/></svg>Núcleo</button>
+        <button class="shape-btn" data-add="region"><svg viewBox="0 0 60 30"><rect x="4" y="4" width="52" height="22" rx="8" fill="#fdf5e4" stroke="#d9b45a" stroke-width="2" stroke-dasharray="5 3"/></svg>Compartimento</button>
+        <button class="shape-btn" data-add="text"><svg viewBox="0 0 60 30"><text x="30" y="21" font-size="16" text-anchor="middle" font-family="Arial" fill="currentColor">Texto</text></svg>Texto</button>
+        <button class="shape-btn" data-add="title"><svg viewBox="0 0 60 30"><text x="30" y="22" font-size="18" font-weight="bold" text-anchor="middle" font-family="Arial" fill="currentColor">Título</text></svg>Título</button>
+      </div>
+      <h4>Estructuras 3D <small>(Protein Data Bank)</small></h4>
+      <button class="shape-btn img-btn" id="btnPdb">🧬 Abrir visor 3D…</button>
+      <p class="hint">Cargá cualquier código PDB, rotá la molécula con el mouse e insertala con esa orientación.</p>
+      <h4>Imágenes propias <small>(blots, fotos, microscopía)</small></h4>
+      <label class="shape-btn img-btn"><input type="file" id="imgFile" accept="image/png,image/jpeg,image/gif,image/webp" multiple hidden>🖼 Insertar imagen…</label>
+      <p class="hint">También podés arrastrar un archivo al lienzo o pegar una captura con <kbd>Ctrl+V</kbd>.</p>
+      <p class="hint">Atajos: <kbd>Supr</kbd> borrar · <kbd>Ctrl+D</kbd> duplicar · <kbd>Ctrl+C/V</kbd> · <kbd>Ctrl+Z/Y</kbd> · flechas mueven · <kbd>Espacio</kbd>+arrastrar o rueda del medio para desplazar · rueda para zoom · doble clic en un texto para editarlo.</p>
+    </section>
+
+    <section class="tab-panel" id="tab-ai">
+      <label class="lbl">Proveedor de IA</label>
+      <div class="seg" id="aiProviders">
+        <button type="button" data-p="deepseek">DeepSeek <i></i></button>
+        <button type="button" data-p="gemini">Gemini <i></i></button>
+      </div>
+      <div id="aiStatus" class="ai-status"></div>
+      <form id="aiKeyForm" class="ai-key" hidden>
+        <p id="aiKeyHelp"></p>
+        <input id="aiKey" type="password" autocomplete="off">
+        <details><summary>Avanzado</summary>
+          <label>Modelo <input id="aiModel"></label>
+          <label>URL base <input id="aiBase"></label>
+        </details>
+        <button type="submit" class="primary">Guardar clave</button>
+      </form>
+      <label class="lbl">Describí la figura</label>
+      <textarea id="aiPrompt" rows="6" placeholder="Ej: Red trófica de un bosque mediterráneo con encina, conejo, perdiz, zorro, águila y descomponedores en el suelo"></textarea>
+      <div class="ai-row">
+        <select id="aiGroup">
+          <option value="ecologia">Priorizar ecología</option>
+          <option value="molecular">Priorizar molecular</option>
+          <option value="">Sin preferencia</option>
+        </select>
+        <label class="chk"><input type="checkbox" id="aiReplace" checked> Reemplazar lienzo</label>
+      </div>
+      <button id="aiGo" class="primary wide">Generar figura</button>
+      <div id="aiMsg" class="ai-msg"></div>
+      <h4>Ejemplos</h4>
+      <div class="examples" id="aiExamples"></div>
+    </section>
+  </aside>
+
+  <section class="canvas-area">
+    <div id="stage-wrap"><div id="stage"></div></div>
+  </section>
+
+  <aside class="props" id="props"></aside>
+</main>
+
+<div class="modal" id="modal" hidden>
+  <div class="modal-box">
+    <header><h3 id="modalTitle"></h3><button class="x" id="modalClose">×</button></header>
+    <div id="modalBody"></div>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script src="/static/vendor/konva.min.js"></script>
+<script src="/static/app.js"></script>
+<script src="/static/pdb3d.js"></script>
+<script src="/static/custom_icons.js"></script>
+</body>
+</html>

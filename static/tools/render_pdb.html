@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Render PDB</title>
+<style>
+  html, body { margin: 0; background: #ffffff; font-family: Arial, sans-serif; }
+  #v { width: 2400px; height: 1400px; position: relative; }
+  #info { position: fixed; top: 6px; left: 8px; font-size: 13px; color: #555; z-index: 5; }
+</style>
+<script src="/static/vendor/3Dmol-min.js"></script>
+</head>
+<body>
+<div id="info">cargando…</div>
+<div id="v"></div>
+<script>
+// Uso: /static/tools/render_pdb.html?pdb=/static/pdb/1JFF_orientado.pdb&chains=A:e2582f,f2a65a;B:2a9d8f,7fd3c8
+const q = new URLSearchParams(location.search);
+const pdbUrl = q.get('pdb') || '/static/pdb/1JFF_orientado.pdb';
+// por cadena: color de helices y laminas/lazos
+const chainColors = Object.fromEntries((q.get('chains') || 'A:e2582f,f2a65a;B:2a9d8f,7fd3c8').split(';').map((s) => {
+  const [ch, cols] = s.split(':'); const [h, o] = cols.split(','); return [ch, { h: '#' + h, o: '#' + o }];
+}));
+// mode=ss (por cadena: helices / resto), mode=spectrum (arcoiris N->C); nterm=e4572e:0.08 pinta el extremo N
+const mode = q.get('mode') || 'ss';
+const nterm = q.get('nterm') ? { col: '#' + q.get('nterm').split(':')[0], frac: +q.get('nterm').split(':')[1] } : null;
+const RAINBOW = ['#d62828', '#f77f00', '#fcbf49', '#8ac926', '#2a9d8f', '#1982c4', '#4361ee'];
+const mix = (c1, c2, t) => '#' + [1, 3, 5].map((i) => Math.round(parseInt(c1.slice(i, i + 2), 16) * (1 - t) + parseInt(c2.slice(i, i + 2), 16) * t).toString(16).padStart(2, '0')).join('');
+const rainbow = (f) => { const x = Math.min(Math.max(f, 0), 0.9999) * (RAINBOW.length - 1), i = Math.floor(x); return mix(RAINBOW[i], RAINBOW[i + 1], x - i); };
+const viewer = $3Dmol.createViewer(document.getElementById('v'), { backgroundColor: 'white', backgroundAlpha: 0, antialias: true });
+window.renderDone = (async () => {
+  const txt = await (await fetch(pdbUrl)).text();
+  const m = viewer.addModel(txt, 'pdb');
+  const res = m.selectedAtoms({ hetflag: false }).map((a) => a.resi);
+  const r0 = Math.min(...res), r1 = Math.max(...res);
+  viewer.setStyle({}, {});
+  viewer.setStyle({ hetflag: false }, {
+    cartoon: {
+      thickness: 0.6, arrows: true,
+      colorfunc: (a) => {
+        const f = (a.resi - r0) / (r1 - r0);
+        if (mode === 'spectrum') return a.ss === 'h' ? rainbow(f) : mix(rainbow(f), '#ffffff', 0.25);
+        if (nterm && f < nterm.frac) return a.ss === 'h' ? nterm.col : mix(nterm.col, '#ffffff', 0.3);
+        const c = chainColors[a.chain] || { h: '#999999', o: '#bbbbbb' };
+        return a.ss === 'h' ? c.h : c.o;
+      },
+    },
+  });
+  viewer.setBackgroundColor(0xffffff, 0);
+  viewer.setViewStyle({ style: 'outline', color: 'black', width: 0.03 });
+  viewer.zoomTo({ hetflag: false });
+  viewer.render();
+  document.getElementById('info').textContent = `${pdbUrl}: ${m.selectedAtoms({}).length} átomos`;
+  return true;
+})();
+</script>
+</body>
+</html>
