@@ -16,22 +16,26 @@ quitado de fondos con IA local y generación de figuras a partir de texto (opcio
 
 ## Instalación
 
-Requisitos: **Python 3.11 o más nuevo** y **Git**, más conexión a internet la primera vez.
-- Windows: [python.org](https://www.python.org/downloads/) (marcá *Add python.exe to PATH*) y [git-scm.com](https://git-scm.com/downloads).
-- Mac: `brew install python git`.
-- Linux: los paquetes de tu distribución.
+**1. Bajá el proyecto**, de cualquiera de estas dos formas:
+- Sin instalar nada: en GitHub, botón verde **Code → Download ZIP**, y descomprimilo.
+- Con Git: `git clone https://github.com/kampax/biofig.git`
 
-```bash
-git clone https://github.com/kampax/biofig.git
-cd biofig
-```
-
-Después:
+**2. Abrilo:**
 
 | Sistema | Cómo abrirlo |
 |---|---|
 | **Windows** | Doble clic en **`iniciar.bat`** |
-| **Mac / Linux** | `./iniciar.sh` |
+| **Mac / Linux** | En una terminal, dentro de la carpeta: `./iniciar.sh` (si se descargó como ZIP: `bash iniciar.sh`) |
+
+BioFig necesita **Python 3.11 o más nuevo** y **Git**, más internet la primera vez. **Si faltan, el lanzador ofrece instalarlos**:
+
+| Sistema | Qué hace si falta Python o Git |
+|---|---|
+| **Windows 10/11** | Pregunta *"¿Instalo Python 3.12 / Git automáticamente?"* y los instala con **winget**, el instalador oficial de Windows, a partir de los paquetes oficiales. Para Git, Windows puede pedir permiso de administrador una vez. Sin winget, abre la página de descarga. |
+| **Mac** | Con [Homebrew](https://brew.sh) ofrece `brew install python@3.12 git`; sin Homebrew, explica cómo instalarlos. |
+| **Linux** | Detecta apt, dnf, pacman o zypper, muestra el comando exacto y ofrece ejecutarlo (pide tu contraseña). En Ubuntu 22.04, que trae Python 3.10, ofrece instalar python3.11 en paralelo. |
+
+Si preferís instalarlos a mano: [python.org](https://www.python.org/downloads/) (en Windows, marcá *Add python.exe to PATH*) y [git-scm.com](https://git-scm.com/downloads).
 
 **La primera vez se instala todo solo** con `instalar.py`, y tarda unos minutos:
 1. Verifica Python y Git.
@@ -138,7 +142,8 @@ Detalles técnicos (API, formato de los proyectos, cómo agregar fuentes de icon
 
 | Problema | Solución |
 |---|---|
-| "No se encontró Python" | Instalá Python 3.11+ y marcá *Add python.exe to PATH*; volvé a abrir `iniciar.bat`. |
+| "No se encontró Python" (y no aceptaste instalarlo) | Instalá Python 3.11+ desde python.org marcando *Add python.exe to PATH*, o volvé a abrir `iniciar.bat` y respondé **S**. |
+| winget no está disponible (Windows viejo) | Instalá a mano Python 3.11+ y Git desde los enlaces de arriba. |
 | Falló la descarga de bibliotecas | Revisá la conexión y ejecutá `python instalar.py` de nuevo: retoma donde quedó. |
 | El visor 3D dice "servidor desactualizado" | Cerrá la ventana de BioFig y volvé a abrir `iniciar.bat`. |
 | La IA responde 401/403 | La clave es inválida o venció: cargala de nuevo en la pestaña IA. |

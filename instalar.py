@@ -70,7 +70,12 @@ def crear_venv():
     if PY.exists():
         ok("El entorno virtual .venv ya existe")
         return
-    venv.EnvBuilder(with_pip=True).create(VENV)
+    try:
+        venv.EnvBuilder(with_pip=True).create(VENV)
+    except Exception as e:  # Debian/Ubuntu: falta el paquete python3-venv
+        shutil.rmtree(VENV, ignore_errors=True)
+        fail(f"No se pudo crear el entorno virtual ({e}).\n  En Debian/Ubuntu instalá el módulo venv: "
+             f"sudo apt-get install python3-venv  (o python3.11-venv) y volvé a ejecutar el instalador.")
     ok("Entorno virtual creado en .venv")
 
 
