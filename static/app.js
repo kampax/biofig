@@ -1053,9 +1053,11 @@ function renderPage({ scale = 3, transparent = false, mime = 'image/png', qualit
   grid.visible(false);
   if (transparent) page.visible(false);
   else page.shadowEnabled(false);
-  const z = stage.scaleX();
-  const r = { x: stage.x(), y: stage.y(), width: state.doc.w * z, height: state.doc.h * z };
-  const url = stage.toDataURL({ ...r, pixelRatio: scale / z, mimeType: mime, quality });
+  // se exporta a zoom 1: los bordes con strokeScaleEnabled=false no escalan con el zoom y saldrían engrosados
+  const z = stage.scaleX(), pos = stage.position();
+  stage.scale({ x: 1, y: 1 }); stage.position({ x: 0, y: 0 });
+  const url = stage.toDataURL({ x: 0, y: 0, width: state.doc.w, height: state.doc.h, pixelRatio: scale, mimeType: mime, quality });
+  stage.scale({ x: z, y: z }); stage.position(pos);
   page.visible(true); page.shadowEnabled(true); grid.visible(state.showGrid);
   select(sel);
   return url;
